@@ -1,0 +1,9 @@
+# Dpendencies
+node_modules/
+
+#emacs generated files
+*~
+
+# Build Outputs
+dist/
+dist-types/
