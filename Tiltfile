@@ -1,6 +1,6 @@
 print("Hello from Tilt")
 
-docker_build('backstage', 'packages/backend/', dockerfile='packages/backend/Dockerfile')
+docker_build('ghcr.io/milapj/backstage/backstage', '.', dockerfile='packages/backend/Dockerfile')
 
 k8s_yaml (
   helm(
@@ -8,3 +8,5 @@ k8s_yaml (
     set=['app.srcFrom=null']
     )
 )
+
+k8s_resource('chart-backstage', port_forwards="7007:7007")

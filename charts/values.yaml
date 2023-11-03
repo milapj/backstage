@@ -90,18 +90,18 @@ backstage:
   image:
 
     # -- Backstage image registry
-    registry: ghcr.io
+    registry: ghcr.io/milapj
 
     # -- Backstage image repository
     repository: backstage/backstage
 
     # -- Backstage image tag (immutable tags are recommended)
-    tag: latest
+    tag: 0.0.1
 
     # -- Specify a imagePullPolicy.
     # Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
     # <br /> Ref: https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
 
     # -- Optionally specify an array of imagePullSecrets.
     #  Secrets must be manually created in the namespace.
